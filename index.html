@@ -12,26 +12,27 @@
         <div class="chat-header">
             <div class="service-info">
                 <div class="avatar">
-                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=service" alt="客服头像" id="serviceAvatar">
+                    <!-- 初始设置为机器人头像 -->
+                    <img src="https://s1.imagehub.cc/images/2024/11/06/d7a00d349a2039159224eeac90e7f067.png" alt="客服头像" id="serviceAvatar">
                 </div>
                 <div class="info">
                     <div class="service-name">万程乐娱</div>
-                    <div class="service-id">工号：12001</div>
+                    <div class="service-id">智能助理-万小程</div>
                 </div>
+                <!-- 修改工单按钮 -->
+                <button class="ticket-btn" id="ticketBtn">
+                    <span class="ticket-icon">📋</span>
+                    <span class="ticket-text">反馈</span>
+                </button>
             </div>
         </div>
 
         <!-- 聊天消息区域 -->
         <div class="chat-messages" id="chatMessages">
-            <!-- 默认消息会通过 JavaScript 动态添加 -->
+            <!-- 消息会通过 JavaScript 动态添加 -->
         </div>
 
-        <!-- 修改结束服务按钮为悬浮圆形 -->
-        <div class="floating-end-service">
-            <button class="floating-end-button" id="endServiceButton">×</button>
-        </div>
-
-        <!-- 修改输入区域 -->
+        <!-- 输入区域 -->
         <div class="chat-input">
             <div class="input-buttons left">
                 <button class="icon-button more-button">+</button>
@@ -49,11 +50,29 @@
                 <div class="menu-item" id="sendImage">
                     <span class="menu-icon">🖼️</span>
                     <span>发送图片</span>
-                    <input type="file" id="imageInput" accept="image/*" style="display: none;" multiple>
                 </div>
+                <input type="file" id="imageInput" accept="image/*" style="display: none;" multiple>
                 <div class="menu-item" id="endService">
                     <span class="menu-icon">🔚</span>
                     <span>结束服务</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 订单选择弹窗 -->
+        <div class="order-modal" id="orderModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>请选择您的订单</h3>
+                    <button class="close-modal">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="order-list" id="orderList">
+                        <!-- 订单列表将通过 JavaScript 动态添加 -->
+                    </div>
+                    <div class="more-orders" id="moreOrders">
+                        <button class="more-orders-btn">查看更多订单</button>
+                    </div>
                 </div>
             </div>
         </div>
